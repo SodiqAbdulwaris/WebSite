@@ -47,7 +47,7 @@ a,summary {
   touch-action: manipulation
 }
 a:focus-visible,summary:focus-visible {
-  outline: 3px solid #274193;
+  outline: 3px solid var(--accent);
   outline-offset: 5px
 }
 ::selection {
@@ -139,13 +139,13 @@ a:focus-visible,summary:focus-visible {
   right: 0
 }
 .desktop-nav a:hover,.text-link:hover {
-  color: #274193
+  color: var(--accent)
 }
 .desktop-nav a:active,.text-link:active {
   opacity: .6
 }
 .desktop-nav a.active {
-  color: #274193
+  color: var(--accent)
 }
 .desktop-nav a.active::after {
   right: 0
@@ -289,7 +289,7 @@ h2 {
   margin: 0
 }
 h2 span {
-  color: #274193;
+  color: var(--accent);
   font-style: italic
 }
 .about {
