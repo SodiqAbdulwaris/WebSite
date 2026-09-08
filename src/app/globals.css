@@ -815,6 +815,21 @@ h2 span {
   .member-row-leaders {
     grid-template-columns: 1fr
   }
+  .member-row-leaders .member {
+    display: flex;
+    align-items: center;
+    gap: 16px
+  }
+  .member-row-leaders .member-photo {
+    width: 96px;
+    height: 96px;
+    aspect-ratio: 1/1;
+    border-radius: 12px;
+    flex-shrink: 0
+  }
+  .member-row-leaders .member h3 {
+    margin: 0 0 4px
+  }
 }
 @media(prefers-reduced-motion:reduce) {
   html {
@@ -903,4 +918,19 @@ html.dark {
   .theme-toggle { width: 36px; height: 36px }
   .member-row-officers { grid-template-columns: 1fr }
   .member-row-directors { grid-template-columns: repeat(2,1fr) }
+  .member-row-officers .member {
+    display: flex;
+    align-items: center;
+    gap: 16px
+  }
+  .member-row-officers .member-photo {
+    width: 84px;
+    height: 84px;
+    aspect-ratio: 1/1;
+    border-radius: 12px;
+    flex-shrink: 0
+  }
+  .member-row-officers .member h3 {
+    margin: 0 0 4px
+  }
 }

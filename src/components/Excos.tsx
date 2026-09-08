@@ -35,8 +35,10 @@ function MemberCard({ m, featured }: { m: Member; featured?: boolean }) {
           }
         />
       </div>
-      <h3>{m.name}</h3>
-      <p>{m.role}</p>
+      <div className="member-info">
+        <h3>{m.name}</h3>
+        <p>{m.role}</p>
+      </div>
     </article>
   );
 }
