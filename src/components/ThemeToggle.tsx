@@ -43,7 +43,16 @@ export function ThemeToggle() {
       onClick={toggleTheme}
       aria-label={dark ? "Switch to light theme" : "Switch to dark theme"}
     >
-      {dark ? "Light" : "Dark"}
+      {dark ? (
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="4.5" />
+          <path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4l1.4-1.4M18 6l1.4-1.4" />
+        </svg>
+      ) : (
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+          <path d="M20.4 14.7A8.6 8.6 0 1 1 9.3 3.6a7 7 0 0 0 11.1 11.1Z" />
+        </svg>
+      )}
     </button>
   );
 }

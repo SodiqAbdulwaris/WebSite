@@ -35,14 +35,14 @@ export function Initiatives() {
         </p>
         <div className="program-grid">
           {programs.map((p, i) => (
-            <article className={`program program-${i}`} key={p.title}>
-              <span className="program-label">{p.label}</span>
-              <h3>{p.title}</h3>
-              <p>{p.copy}</p>
-              <a href="#community">
-                Get involved <span aria-hidden="true">↗</span>
-              </a>
-            </article>
+            <a href="#community" className="program" key={p.title}>
+              <span className="program-num">{String(i + 1).padStart(2, "0")}</span>
+              <div className="program-body">
+                <span className="program-label">{p.label}</span>
+                <h3>{p.title}</h3>
+                <p>{p.copy}</p>
+              </div>
+            </a>
           ))}
         </div>
         <p className="program-note">
