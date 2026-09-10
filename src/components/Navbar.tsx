@@ -34,7 +34,7 @@ export function Navbar() {
 
   useEffect(() => {
     function onScroll() {
-      setScrolled(window.scrollY > 12);
+      setScrolled(window.scrollY > 120);
     }
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
