@@ -875,13 +875,26 @@ h2 span {
     display: block
   }
   .mobile-menu summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
-    font-size: 13px;
-    padding: 13px;
     list-style: none;
     border: 1px solid var(--line);
     border-radius: 999px;
-    padding-inline: 18px
+    color: var(--foreground);
+    transition: background .2s,transform .1s
+  }
+  .mobile-menu summary::-webkit-details-marker {
+    display: none
+  }
+  .mobile-menu summary:hover {
+    background: color-mix(in srgb,var(--foreground) 8%,transparent)
+  }
+  .mobile-menu summary:active {
+    transform: scale(.95)
   }
   .mobile-menu nav {
     position: absolute;

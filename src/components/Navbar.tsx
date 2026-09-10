@@ -58,7 +58,11 @@ export function Navbar() {
       </nav>
       <div className="header-actions"><ThemeToggle /><a className="button small header-cta" href="#community">Join us <span aria-hidden="true">↗</span></a></div>
       <details className="mobile-menu" ref={menuRef}>
-        <summary>Menu</summary>
+        <summary aria-label="Menu">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+            <path d="M3 6h18M3 12h18M3 18h18" />
+          </svg>
+        </summary>
         <nav aria-label="Mobile">{links.map(([id, label]) => <a key={id} href={`#${id}`} onClick={closeMenu}>{label}</a>)}</nav>
       </details>
     </div>
