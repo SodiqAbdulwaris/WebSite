@@ -6,6 +6,7 @@ const links = [
   ["events", "Events"],
   ["excos", "Excos"],
   ["community", "Community"],
+  ["dues", "Dues"],
 ];
 
 export function Footer() {
@@ -39,10 +40,18 @@ export function Footer() {
             <ul>
               <li>Email — coming soon</li>
               <li>
-                <a href="https://twitter.com/NACOSNile">@NACOSNile on X</a>
+                <a href="https://twitter.com/NACOSNile" target="_blank" rel="noopener noreferrer">
+                  @NACOSNile on X
+                </a>
               </li>
               <li>
-                <a href="#community">Reach us on WhatsApp</a>
+                <a
+                  href="https://chat.whatsapp.com/EXBkX1Gq1k80apkd9Pp1y1?s=cl&p=a&mlu=4&ilr=4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Reach us on WhatsApp
+                </a>
               </li>
             </ul>
           </div>

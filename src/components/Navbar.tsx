@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ThemeToggle } from "./ThemeToggle";
 
-const links = [["about", "About"], ["disciplines", "Disciplines"], ["events", "Events"], ["excos", "Excos"], ["community", "Community"], ["contact", "Contact"]];
+const links = [["about", "About"], ["disciplines", "Disciplines"], ["events", "Events"], ["excos", "Excos"], ["community", "Community"], ["dues", "Dues"], ["contact", "Contact"]];
 
 export function Navbar() {
   const menuRef = useRef<HTMLDetailsElement>(null);

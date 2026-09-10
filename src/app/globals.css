@@ -454,6 +454,50 @@ h2 span {
   margin: 32px 0 0
 }
 
+/* ── BuildX: dated event spotlight, deliberately breaks the light/dark rhythm ── */
+.buildx {
+  background: linear-gradient(135deg,var(--accent) 0%,#16234f 100%);
+  color: #fff;
+  padding: 92px 0
+}
+.buildx .eyebrow {
+  color: rgba(255,255,255,.72)
+}
+.buildx h2 {
+  color: #fff;
+  font-size: clamp(32px,4.4vw,50px)
+}
+.buildx .section-copy {
+  color: rgba(255,255,255,.82);
+  max-width: 620px
+}
+.buildx-points {
+  list-style: none;
+  margin: 30px 0 38px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 11px
+}
+.buildx-points li {
+  font-size: 14px;
+  padding-left: 26px;
+  position: relative
+}
+.buildx-points li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  color: #9db8ff
+}
+.buildx-actions {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap
+}
+
 /* ── Executive council ── */
 .council {
   padding-top: 108px;
@@ -561,6 +605,156 @@ h2 span {
   color: #fff;
   text-decoration: underline;
   text-underline-offset: 3px
+}
+
+/* ── Dues & clearance ── */
+.dues {
+  padding: 108px 0
+}
+.dues>.section-copy {
+  margin-top: 25px;
+  max-width: 620px
+}
+.dues>p.section-copy:last-of-type {
+  max-width: 700px;
+  margin-top: 36px
+}
+.dues-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 44px
+}
+.dues-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 28px
+}
+.dues-card h3 {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 14px;
+  color: var(--muted)
+}
+.dues-amount {
+  font-family: var(--font-serif),Georgia,serif;
+  font-size: 32px;
+  margin: 0 0 12px
+}
+.dues-amount span {
+  font-family: var(--font-geist-sans),sans-serif;
+  font-size: 12px;
+  color: var(--muted);
+  margin-left: 8px
+}
+.dues-card>p:last-child {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0
+}
+.dues-schedule {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 24px
+}
+.dues-schedule>div {
+  background: color-mix(in srgb,var(--accent) 6%,transparent);
+  border-radius: 14px;
+  padding: 22px 28px
+}
+.dues-schedule-label {
+  display: block;
+  font: 10px var(--font-geist-mono),monospace;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--muted)
+}
+.dues-schedule-total {
+  display: block;
+  font-family: var(--font-serif),Georgia,serif;
+  font-size: 24px;
+  margin: 8px 0 4px
+}
+.dues-schedule-breakdown {
+  display: block;
+  font-size: 12px;
+  color: var(--muted)
+}
+.dues-payment {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  margin-top: 32px
+}
+.dues-payment summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  font-size: 14px;
+  font-weight: 600
+}
+.dues-payment summary::-webkit-details-marker {
+  display: none
+}
+.dues-payment[open] .expand {
+  transform: rotate(45deg)
+}
+.dues-payment-body {
+  padding: 0 24px 24px
+}
+.dues-payment[open] .dues-payment-body {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px
+}
+.dues-payment-body p {
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 0
+}
+.dues-payment-body strong {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
+  margin-bottom: 4px
+}
+.dues-account-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px
+}
+.copy-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+  padding: 4px 9px;
+  cursor: pointer;
+  transition: background .2s,color .2s,transform .1s
+}
+.copy-button:hover {
+  color: var(--foreground);
+  background: color-mix(in srgb,var(--foreground) 6%,transparent)
+}
+.copy-button:active {
+  transform: scale(.95)
+}
+.dues>.button {
+  margin-top: 32px
 }
 
 /* ── Footer: dark, merges with community ── */
@@ -809,6 +1003,22 @@ h2 span {
     font-size: 9px;
     flex-direction: column;
     gap: 10px
+  }
+  .buildx {
+    padding: 64px 0
+  }
+  .buildx-actions {
+    gap: 18px
+  }
+  .dues {
+    padding: 64px 0
+  }
+  .dues-grid,.dues-schedule {
+    grid-template-columns: 1fr
+  }
+  .dues-payment[open] .dues-payment-body {
+    grid-template-columns: 1fr;
+    gap: 16px
   }
 }
 @media(max-width:390px) {
